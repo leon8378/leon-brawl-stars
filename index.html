@@ -13,35 +13,37 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background: #100d1c;
+  background: #090914;
   color: white;
+  overflow-x: hidden;
 }
 
 header {
-  background: #191326;
-  padding: 22px;
+  padding: 24px 15px;
   text-align: center;
-  border-bottom: 2px solid #ed3155;
+  background: linear-gradient(135deg,#211044,#100b20);
+  border-bottom: 2px solid #ff315c;
 }
 
 header h1 {
-  color: #ff4567;
   font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+header span {
+  color: #ff315c;
 }
 
 nav {
   display: flex;
   justify-content: center;
+  gap: 25px;
+  padding: 17px 10px;
+  background: #121020;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 18px;
-  background: #21182e;
 }
 
 nav a {
@@ -51,136 +53,131 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff4567;
+  color: #ff315c;
 }
 
 .hero {
   text-align: center;
-  padding: 90px 20px;
-  background: linear-gradient(135deg, #35142c, #11101b);
+  padding: 85px 20px;
+  background:
+    radial-gradient(circle at center,#38205e 0%,#100b20 55%,#090914 100%);
 }
 
 .hero h2 {
-  font-size: 42px;
-  color: #ff4567;
+  font-size: clamp(32px,7vw,60px);
+  font-weight: 900;
   margin-bottom: 15px;
 }
 
+.hero h2 span {
+  color: #ff315c;
+}
+
 .hero p {
-  color: #ddd;
-  font-size: 18px;
-  margin: 10px;
+  color: #c5bfd5;
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  background: #ff315c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .25s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px #ff315c55;
 }
 
 section {
-  padding: 65px 20px;
+  max-width: 950px;
+  margin: auto;
+  padding: 55px 20px;
   text-align: center;
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 25px;
 }
 
 .section-title span {
-  color: #ff4567;
-}
-
-.discord-btn,
-.tiktok-btn {
-  display: inline-block;
-  padding: 16px 28px;
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 15px;
-  transition: 0.25s;
-}
-
-.discord-btn {
-  background: #5865F2;
-}
-
-.tiktok-btn {
-  background: #e52d55;
-}
-
-.discord-btn:hover,
-.tiktok-btn:hover {
-  transform: scale(1.06);
-  filter: brightness(1.2);
+  color: #ff315c;
 }
 
 .club-card {
-  background: linear-gradient(145deg, #291329, #11101b);
-  border: 2px solid #ed3155;
-  border-radius: 20px;
-  padding: 35px 15px;
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 0 0 25px #ed315533;
-}
-
-.club-icon {
-  font-size: 65px;
+  background: linear-gradient(145deg,#201638,#11101e);
+  border: 1px solid #713b91;
+  border-radius: 18px;
+  padding: 35px 20px;
+  box-shadow: 0 0 35px #9c38ff22;
 }
 
 .club-card h3 {
-  color: #ff4567;
-  font-size: 29px;
-  margin: 15px;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .trophies {
-  color: #ffd34f;
-  font-size: 35px;
+  font-size: clamp(35px,8vw,55px);
   font-weight: 900;
-  margin: 20px;
+  color: #ffd43b;
+  margin: 20px 0;
+  text-shadow: 0 0 20px #ffd43b55;
+}
+
+.club-tag {
+  color: #aaa3bd;
+  margin-bottom: 22px;
+}
+
+.community {
+  color: #c6c0d0;
+  line-height: 1.7;
 }
 
 .owner-card {
-  border: 1px solid #ff4567;
+  background: #151323;
+  padding: 30px;
   border-radius: 15px;
-  padding: 25px;
-  max-width: 400px;
-  margin: 25px auto;
+  border: 1px solid #343047;
 }
 
 .owner-card h3 {
-  color: #ff4567;
-  margin-bottom: 12px;
-}
-
-.community-text {
-  color: #ccc;
-  margin: 15px;
-  line-height: 1.6;
+  font-size: 27px;
+  color: #ff315c;
+  margin-bottom: 10px;
 }
 
 footer {
-  background: #191326;
   text-align: center;
-  padding: 30px 15px;
-  border-top: 2px solid #ed3155;
-  color: #aaa;
+  padding: 35px 15px;
+  background: #100d1c;
+  border-top: 1px solid #30223f;
 }
 
-footer .tiktok-btn {
-  margin-top: 20px;
+footer p {
+  color: #aaa3bd;
+  margin-bottom: 20px;
 }
 
-@media(max-width: 600px) {
-  .hero h2 {
-    font-size: 32px;
+@media(max-width:600px) {
+  header h1 {
+    font-size: 23px;
   }
 
   nav {
-    gap: 14px;
+    gap: 15px;
   }
 
-  .section-title {
-    font-size: 25px;
+  .hero {
+    padding: 65px 15px;
   }
 }
 </style>
@@ -189,8 +186,7 @@ footer .tiktok-btn {
 <body>
 
 <header>
-  <h1>👑 LEON BRAWL STARS</h1>
-  <p>THE BALKAN BRAWL STARS COMMUNITY</p>
+  <h1>LEON <span>BRAWL STARS</span></h1>
 </header>
 
 <nav>
@@ -200,73 +196,108 @@ footer .tiktok-btn {
   <a href="#owner">OWNER</a>
 </nav>
 
-<!-- HOME -->
 <div class="hero" id="home">
-  <h2>WELCOME TO LEON BRAWL STARS</h2>
-  <p>Welcome to our Brawl Stars gaming community!</p>
-  <p>Play together. Have fun. Become legends.</p>
-
-  <!-- DISCORD BUTTON -->
-  <a class="discord-btn"
+  <h2>WELCOME TO <span>LEON BRAWL STARS</span></h2>
+  <p>One community. One club. One family.</p>
+  <a class="btn"
      href="https://discord.gg/wEY5EWWk6"
-     target="_blank"
-     rel="noopener noreferrer">
-     💬 JOIN OUR DISCORD
+     target="_blank">
+     JOIN OUR DISCORD
   </a>
 </div>
 
-<!-- MAIN CLUB -->
 <section id="club">
-  <h2 class="section-title">OUR <span>MAIN CLUB</span></h2>
+  <h2 class="section-title">MAIN <span>CLUB</span></h2>
 
   <div class="club-card">
-    <div class="club-icon">👑</div>
-    <h3>BALKAN_KRALJEVI</h3>
-    <div class="trophies">🏆 1,000,000+</div>
-    <p>THE BALKAN ROYALTY</p>
-    <p class="community-text">
-      Our main Brawl Stars club.
-      Represent the community with pride!
-    </p>
-    <p>★ MAIN CLUB ★</p>
+    <h3>🏆 BALKAN_KRALJEVI</h3>
+    <p>OUR CLUB TROPHIES</p>
+
+    <div class="trophies">
+      <span id="trophyCounter">0</span> 🏆
+    </div>
+
+    <p class="club-tag">CLUB TAG: #2PCRQUJVY</p>
+
+    <a class="btn"
+       href="https://link.brawlstars.com/invite/band/en?tag=2PCRQUJVY"
+       target="_blank">
+       JOIN THE CLUB
+    </a>
   </div>
 </section>
 
-<!-- COMMUNITY -->
 <section id="community">
   <h2 class="section-title">OUR <span>COMMUNITY</span></h2>
-  <p class="community-text">
-    Join BALKAN_KRALJEVI, meet other players,
-    talk about Brawl Stars and enjoy the community!
+
+  <p class="community">
+    Welcome to BALKAN_KRALJEVI!
+    A Brawl Stars community built for players
+    who love the game, teamwork and competition.
+    Join our Discord and become part of the family!
   </p>
+
+  <br><br>
+
+  <a class="btn"
+     href="https://discord.gg/wEY5EWWk6"
+     target="_blank">
+     JOIN DISCORD
+  </a>
 </section>
 
-<!-- OWNER -->
 <section id="owner">
-  <h2 class="section-title">SERVER <span>OWNER</span></h2>
+  <h2 class="section-title">WEBSITE <span>OWNER</span></h2>
 
   <div class="owner-card">
-    <h3>👑 PR0F1T_B0Y</h3>
-    <p>Official owner of BALKAN_KRALJEVI</p>
-    <p>TikTok: @bkleonbs</p>
+    <h3>PR0F1T_B0Y</h3>
+    <p>Founder of LEON BRAWL STARS</p>
   </div>
 </section>
 
-<!-- TIKTOK BUTTON AT THE BOTTOM -->
 <footer>
-  <p>👑 BALKAN_KRALJEVI</p>
-  <p>Respect the club. Respect the community.</p>
-
-  <a class="tiktok-btn"
-     href="https://www.tiktok.com/@bkleonbs"
-     target="_blank"
-     rel="noopener noreferrer">
-     🎵 FOLLOW PR0F1T_B0Y ON TIKTOK
-  </a>
-
   <p>© 2026 LEON BRAWL STARS</p>
-  <p>Fan-made website. Not affiliated with Supercell.</p>
+
+  <a class="btn"
+     href="https://www.tiktok.com/@bkleonbs"
+     target="_blank">
+     FOLLOW ON TIKTOK
+  </a>
 </footer>
+
+<script>
+const targetTrophies = 1195935;
+const counter = document.getElementById("trophyCounter");
+
+let started = false;
+
+function animateTrophies() {
+  if (started) return;
+  started = true;
+
+  const duration = 2200;
+  const startTime = performance.now();
+
+  function update(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 4);
+
+    const current = Math.floor(targetTrophies * eased);
+
+    counter.textContent = current.toLocaleString("de-DE");
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      counter.textContent = targetTrophies.toLocaleString("de-DE");
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+animateTrophies();
+</script>
 
 </body>
 </html>
