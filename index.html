@@ -1,87 +1,267 @@
- const subject = encodeURIComponent(
-   "Website message from " + name
- );
 
- const body = encodeURIComponent(
-   "Name: " + name +
-   "\nEmail: " + email +
-   "\n\nMessage:\n" + message
- );
-
- window.location.href =
-   "mailto:leon.kelhar2108@gmail.com?subject=" +
-   subject + "&body=" + body;
-});
-</script>
-
-</body>
-</html>
-
-<section id="community" class="community-section">
-  <h2>JOIN THE <span>BALKAN_KRALJEVI</span></h2>
-  <p>Join our Brawl Stars community with over 1,000,000 trophies!</p>
-
-  <div class="community-buttons">
-    <a href="https://discord.gg/wEY5EWWk6"
-       target="_blank" class="discord-btn">
-       💬 JOIN OUR DISCORD
-    </a>
-
-    <a href="https://www.tiktok.com/@bkleonbs"
-       target="_blank" class="tiktok-btn">
-       🎵 FOLLOW OUR OWNER
-    </a>
-  </div>
-
-  <div class="owner-card">
-    <h3>👑 SERVER OWNER</h3>
-    <p>PR0F1T_B0Y</p>
-    <p>TikTok: @bkleonbs</p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEON BRAWL STARS</title>
 
 <style>
-.community-section {
-  text-align: center;
-  padding: 60px 15px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background: #100d1c;
   color: white;
 }
 
-.community-section h2 span {
+header {
+  background: #191326;
+  padding: 22px;
+  text-align: center;
+  border-bottom: 2px solid #ed3155;
+}
+
+header h1 {
+  color: #ff4567;
+  font-size: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 18px;
+  background: #21182e;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
   color: #ff4567;
 }
 
-.community-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0;
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #35142c, #11101b);
 }
 
-.community-buttons a {
-  padding: 15px 25px;
+.hero h2 {
+  font-size: 42px;
+  color: #ff4567;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: 18px;
+}
+
+section {
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.section-title span {
+  color: #ff4567;
+}
+
+.discord-btn,
+.tiktok-btn {
+  display: inline-block;
+  padding: 16px 28px;
   border-radius: 12px;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  margin: 15px;
   transition: 0.25s;
 }
 
-.discord-btn { background: #5865F2; }
-.tiktok-btn { background: #e52d55; }
+.discord-btn {
+  background: #5865F2;
+}
 
-.community-buttons a:hover {
+.tiktok-btn {
+  background: #e52d55;
+}
+
+.discord-btn:hover,
+.tiktok-btn:hover {
   transform: scale(1.06);
   filter: brightness(1.2);
+}
+
+.club-card {
+  background: linear-gradient(145deg, #291329, #11101b);
+  border: 2px solid #ed3155;
+  border-radius: 20px;
+  padding: 35px 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 25px #ed315533;
+}
+
+.club-icon {
+  font-size: 65px;
+}
+
+.club-card h3 {
+  color: #ff4567;
+  font-size: 29px;
+  margin: 15px;
+}
+
+.trophies {
+  color: #ffd34f;
+  font-size: 35px;
+  font-weight: 900;
+  margin: 20px;
 }
 
 .owner-card {
   border: 1px solid #ff4567;
   border-radius: 15px;
-  padding: 20px;
-  max-width: 350px;
-  margin: 30px auto 0;
+  padding: 25px;
+  max-width: 400px;
+  margin: 25px auto;
+}
+
+.owner-card h3 {
+  color: #ff4567;
+  margin-bottom: 12px;
+}
+
+.community-text {
+  color: #ccc;
+  margin: 15px;
+  line-height: 1.6;
+}
+
+footer {
+  background: #191326;
+  text-align: center;
+  padding: 30px 15px;
+  border-top: 2px solid #ed3155;
+  color: #aaa;
+}
+
+footer .tiktok-btn {
+  margin-top: 20px;
+}
+
+@media(max-width: 600px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <h1>👑 LEON BRAWL STARS</h1>
+  <p>THE BALKAN BRAWL STARS COMMUNITY</p>
+</header>
+
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#club">MAIN CLUB</a>
+  <a href="#community">COMMUNITY</a>
+  <a href="#owner">OWNER</a>
+</nav>
+
+<!-- HOME -->
+<div class="hero" id="home">
+  <h2>WELCOME TO LEON BRAWL STARS</h2>
+  <p>Welcome to our Brawl Stars gaming community!</p>
+  <p>Play together. Have fun. Become legends.</p>
+
+  <!-- THE ONLY DISCORD BUTTON -->
+  <a class="discord-btn"
+     href="https://discord.gg/wEY5EWWk6"
+     target="_blank"
+     rel="noopener noreferrer">
+     💬 JOIN OUR DISCORD
+  </a>
+</div>
+
+<!-- MAIN CLUB -->
+<section id="club">
+  <h2 class="section-title">OUR <span>MAIN CLUB</span></h2>
+
+  <div class="club-card">
+    <div class="club-icon">👑</div>
+    <h3>BALKAN_KRALJEVI</h3>
+    <div class="trophies">🏆 1,000,000+</div>
+    <p>THE BALKAN ROYALTY</p>
+    <p class="community-text">
+      Our main Brawl Stars club.
+      Represent the community with pride!
+    </p>
+    <p>★ MAIN CLUB ★</p>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <h2 class="section-title">OUR <span>COMMUNITY</span></h2>
+  <p class="community-text">
+    Join BALKAN_KRALJEVI, meet other players,
+    talk about Brawl Stars and enjoy the community!
+  </p>
+</section>
+
+<!-- OWNER -->
+<section id="owner">
+  <h2 class="section-title">SERVER <span>OWNER</span></h2>
+
+  <div class="owner-card">
+    <h3>👑 PR0F1T_B0Y</h3>
+    <p>Official owner of BALKAN_KRALJEVI</p>
+    <p>TikTok: @bkleonbs</p>
+  </div>
+</section>
+
+<!-- TIKTOK BUTTON AT THE VERY BOTTOM -->
+<footer>
+  <p>👑 BALKAN_KRALJEVI</p>
+  <p>Respect the club. Respect the community.</p>
+
+  <a class="tiktok-btn"
+     href="https://www.tiktok.com/@bkleonbs"
+     target="_blank"
+     rel="noopener noreferrer">
+     🎵 FOLLOW PR0F1T_B0Y ON TIKTOK
+  </a>
+
+  <p>© 2026 LEON BRAWL STARS</p>
+  <p>Fan-made website. Not affiliated with Supercell.</p>
+</footer>
+
+</body>
+</html>
