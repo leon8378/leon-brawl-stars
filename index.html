@@ -1,184 +1,157 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEON BRAWL STARS</title>
+<title>BALKANGG | Brawl Stars</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #090914;
-  color: white;
-  overflow-x: hidden;
+    background: #09090d;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  padding: 24px 15px;
-  text-align: center;
-  background: linear-gradient(135deg,#211044,#100b20);
-  border-bottom: 2px solid #ff315c;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111116;
+    border-bottom: 2px solid #ff3030;
 }
 
-header h1 {
-  font-size: 30px;
-  font-weight: 900;
-  letter-spacing: 2px;
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-header span {
-  color: #ff315c;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 17px 10px;
-  background: #121020;
-  flex-wrap: wrap;
+.logo span {
+    color: #ff3030;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ff315c;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
 .hero {
-  text-align: center;
-  padding: 85px 20px;
-  background:
-    radial-gradient(circle at center,#38205e 0%,#100b20 55%,#090914 100%);
+    text-align: center;
+    padding: 75px 20px;
+    background: linear-gradient(135deg,#180b0b,#111116,#240909);
 }
 
-.hero h2 {
-  font-size: clamp(32px,7vw,60px);
-  font-weight: 900;
-  margin-bottom: 15px;
+.hero h1 {
+    font-size: clamp(38px, 8vw, 65px);
+    font-weight: 900;
 }
 
-.hero h2 span {
-  color: #ff315c;
+.hero h1 span {
+    color: #ff3030;
 }
 
 .hero p {
-  color: #c5bfd5;
-  font-size: 17px;
-  margin-bottom: 28px;
+    color: #aaa;
+    margin-top: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 14px 25px;
-  background: #ff315c;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .25s;
-}
-
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px #ff315c55;
-}
-
-section {
-  max-width: 950px;
-  margin: auto;
-  padding: 55px 20px;
-  text-align: center;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
 }
 
 .section-title {
-  font-size: 32px;
-  margin-bottom: 25px;
+    font-size: 26px;
+    margin-bottom: 25px;
 }
 
-.section-title span {
-  color: #ff315c;
+.podium {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-bottom: 45px;
 }
 
-.club-card {
-  background: linear-gradient(145deg,#201638,#11101e);
-  border: 1px solid #713b91;
-  border-radius: 18px;
-  padding: 35px 20px;
-  box-shadow: 0 0 35px #9c38ff22;
+.podium-card {
+    background: #17171e;
+    border: 1px solid #333;
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 12px;
 }
 
-.club-card h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
+.podium-card h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
-.trophies {
-  font-size: clamp(35px,8vw,55px);
-  font-weight: 900;
-  color: #ffd43b;
-  margin: 20px 0;
-  text-shadow: 0 0 20px #ffd43b55;
+.gold { color: #ffd43b; }
+.silver { color: #c5c5d0; }
+.bronze { color: #cd8952; }
+
+.search {
+    width: 100%;
+    padding: 16px;
+    background: #17171e;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-.club-tag {
-  color: #aaa3bd;
-  margin-bottom: 22px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #14141a;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.community {
-  color: #c6c0d0;
-  line-height: 1.7;
+th, td {
+    padding: 17px 12px;
+    text-align: left;
+    border-bottom: 1px solid #292932;
 }
 
-.owner-card {
-  background: #151323;
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid #343047;
+th {
+    color: #ff4545;
+    background: #1c1c24;
 }
 
-.owner-card h3 {
-  font-size: 27px;
-  color: #ff315c;
-  margin-bottom: 10px;
+tr:hover {
+    background: #22222c;
+}
+
+.rank {
+    color: #ff4545;
+    font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  padding: 35px 15px;
-  background: #100d1c;
-  border-top: 1px solid #30223f;
-}
-
-footer p {
-  color: #aaa3bd;
-  margin-bottom: 20px;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #292932;
+    margin-top: 50px;
 }
 
 @media(max-width:600px) {
-  header h1 {
-    font-size: 23px;
-  }
-
-  nav {
-    gap: 15px;
-  }
-
-  .hero {
-    padding: 65px 15px;
-  }
+    nav { display: none; }
+    .podium { gap: 7px; }
+    .podium-card { padding: 18px 5px; }
+    th,td { padding: 12px 6px; font-size: 12px; }
 }
 </style>
 </head>
@@ -186,117 +159,110 @@ footer p {
 <body>
 
 <header>
-  <h1>LEON <span>BRAWL STARS</span></h1>
+    <div class="logo">BALKAN<span>GG</span></div>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#rankings">RANKINGS</a>
+    </nav>
 </header>
 
-<nav>
-  <a href="#home">HOME</a>
-  <a href="#club">MAIN CLUB</a>
-  <a href="#community">COMMUNITY</a>
-  <a href="#owner">OWNER</a>
-</nav>
-
-<div class="hero" id="home">
-  <h2>WELCOME TO <span>LEON BRAWL STARS</span></h2>
-  <p>One community. One club. One family.</p>
-  <a class="btn"
-     href="https://discord.gg/wEY5EWWk6"
-     target="_blank">
-     JOIN OUR DISCORD
-  </a>
-</div>
-
-<section id="club">
-  <h2 class="section-title">MAIN <span>CLUB</span></h2>
-
-  <div class="club-card">
-    <h3>🏆 BALKAN_KRALJEVI</h3>
-    <p>OUR CLUB TROPHIES</p>
-
-    <div class="trophies">
-      <span id="trophyCounter">0</span> 🏆
-    </div>
-
-    <p class="club-tag">CLUB TAG: #2PCRQUJVY</p>
-
-    <a class="btn"
-       href="https://link.brawlstars.com/invite/band/en?tag=2PCRQUJVY"
-       target="_blank">
-       JOIN THE CLUB
-    </a>
-  </div>
+<section class="hero">
+    <h1>BALKAN<span>GG</span></h1>
+    <p>THE HOME OF BALKAN BRAWL STARS</p>
+    <p>🇭🇷 CROATIAN CLUB LEADERBOARD</p>
 </section>
 
-<section id="community">
-  <h2 class="section-title">OUR <span>COMMUNITY</span></h2>
+<main class="container">
 
-  <p class="community">
-    Welcome to BALKAN_KRALJEVI!
-    A Brawl Stars community built for players
-    who love the game, teamwork and competition.
-    Join our Discord and become part of the family!
-  </p>
+    <h2 class="section-title">🏆 TOP 3 CLUBS</h2>
 
-  <br><br>
+    <div class="podium" id="podium"></div>
 
-  <a class="btn"
-     href="https://discord.gg/wEY5EWWk6"
-     target="_blank">
-     JOIN DISCORD
-  </a>
-</section>
+    <section id="rankings">
+        <h2 class="section-title">🇭🇷 CLUB RANKINGS</h2>
 
-<section id="owner">
-  <h2 class="section-title">WEBSITE <span>OWNER</span></h2>
+        <input
+            class="search"
+            id="search"
+            placeholder="Search clubs..."
+            oninput="renderClubs()"
+        >
 
-  <div class="owner-card">
-    <h3>PR0F1T_B0Y</h3>
-    <p>Founder of LEON BRAWL STARS</p>
-  </div>
-</section>
+        <div style="overflow-x:auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>CLUB</th>
+                        <th>TROPHIES</th>
+                        <th>MEMBERS</th>
+                    </tr>
+                </thead>
+                <tbody id="clubs"></tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
 
 <footer>
-  <p>© 2026 LEON BRAWL STARS</p>
-
-  <a class="btn"
-     href="https://www.tiktok.com/@bkleonbs"
-     target="_blank">
-     FOLLOW ON TIKTOK
-  </a>
+    © 2026 BALKANGG | ALL RIGHTS RESERVED
+    <br><br>
+    FAN-MADE BRAWL STARS COMMUNITY
 </footer>
 
 <script>
-const targetTrophies = 1195935;
-const counter = document.getElementById("trophyCounter");
+// DEMO DATA - NOT LIVE API DATA
+const clubData = [
+    {name:"BALKAN_KRALJEVI",tag:"#BALKAN",trophies:1000000,members:30},
+    {name:"BALKANGG",tag:"#BGG123",trophies:950000,members:30},
+    {name:"CROATIAN KINGS",tag:"#CRO123",trophies:900000,members:29},
+    {name:"HRVATSKI RATNICI",tag:"#HRV123",trophies:850000,members:30},
+    {name:"BALKAN LEGENDS",tag:"#LEG123",trophies:800000,members:28},
+    {name:"CRO GAMERS",tag:"#CRO456",trophies:750000,members:30}
+];
 
-let started = false;
+function renderClubs() {
+    const query = document.getElementById("search")
+        .value.toLowerCase();
 
-function animateTrophies() {
-  if (started) return;
-  started = true;
+    const filtered = clubData.filter(club =>
+        club.name.toLowerCase().includes(query) ||
+        club.tag.toLowerCase().includes(query)
+    );
 
-  const duration = 2200;
-  const startTime = performance.now();
-
-  function update(now) {
-    const progress = Math.min((now - startTime) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 4);
-
-    const current = Math.floor(targetTrophies * eased);
-
-    counter.textContent = current.toLocaleString("de-DE");
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      counter.textContent = targetTrophies.toLocaleString("de-DE");
-    }
-  }
-
-  requestAnimationFrame(update);
+    document.getElementById("clubs").innerHTML =
+        filtered.map((club,index) => `
+            <tr>
+                <td class="rank">#${index+1}</td>
+                <td>
+                    <b>${club.name}</b><br>
+                    <small style="color:#888">${club.tag}</small>
+                </td>
+                <td>🏆 ${club.trophies.toLocaleString("en-US")}</td>
+                <td>${club.members}/30</td>
+            </tr>
+        `).join("");
 }
 
-animateTrophies();
+function renderPodium() {
+    const medals = ["🥇","🥈","🥉"];
+    const colors = ["gold","silver","bronze"];
+
+    document.getElementById("podium").innerHTML =
+        clubData.slice(0,3).map((club,index) => `
+            <div class="podium-card">
+                <h2 class="${colors[index]}">${medals[index]}</h2>
+                <h3>${club.name}</h3>
+                <p style="color:#aaa;margin-top:12px">
+                    ${club.trophies.toLocaleString("en-US")} trophies
+                </p>
+            </div>
+        `).join("");
+}
+
+renderClubs();
+renderPodium();
 </script>
 
 </body>
